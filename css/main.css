@@ -151,7 +151,7 @@ body {
   display: flex;
 }
 
-.box {
+.Illuminated {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,5 +245,72 @@ body {
   background-color: rgba(105, 105, 105, 0.062);
   -webkit-transform: skew(25deg);
           transform: skew(25deg);
+}
+
+.cats {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff99cc;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.activator {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.activator--white {
+  -webkit-clip-path: polygon(35.66% 85.67%, 44.99% 83.13%, 54.08% 90.2%, 55.1% 101.27%, 64.89% 94.58%, 74.59% 86.97%, 82.83% 78.07%, 88.86% 67.82%, 91.48% 56.61%, 90.3% 42.78%, 86.06% 31.29%, 77.45% 21.44%, 67.34% 14.67%);
+          clip-path: polygon(35.66% 85.67%, 44.99% 83.13%, 54.08% 90.2%, 55.1% 101.27%, 64.89% 94.58%, 74.59% 86.97%, 82.83% 78.07%, 88.86% 67.82%, 91.48% 56.61%, 90.3% 42.78%, 86.06% 31.29%, 77.45% 21.44%, 67.34% 14.67%);
+}
+
+.activator--white:hover ~ .drop {
+  background-color: #1a1a1a;
+}
+
+.activator--white:hover ~ .cats__icon {
+  -webkit-transform: translateX(45px) translateY(95px) scale(1.4) rotate(180deg);
+          transform: translateX(45px) translateY(95px) scale(1.4) rotate(180deg);
+}
+
+.activator--black {
+  -webkit-clip-path: polygon(35% 86%, 23% 79.33%, 15.86% 70.67%, 11.63% 61.78%, 8.63% 52.71%, 8.45% 43.74%, 10.78% 32.35%, 16.65% 22.15%, 26.05% 12.86%, 34.44% 6.24%, 44.4% 0%, 47.15% 11%, 56.69% 17.26%, 66.57% 14.04%);
+          clip-path: polygon(35% 86%, 23% 79.33%, 15.86% 70.67%, 11.63% 61.78%, 8.63% 52.71%, 8.45% 43.74%, 10.78% 32.35%, 16.65% 22.15%, 26.05% 12.86%, 34.44% 6.24%, 44.4% 0%, 47.15% 11%, 56.69% 17.26%, 66.57% 14.04%);
+}
+
+.activator--black:hover ~ .drop {
+  background-color: #f2f2f2;
+}
+
+.activator--black:hover ~ .cats__icon {
+  -webkit-transform: translateX(45px) translateY(95px) scale(1.4) rotate(0deg);
+          transform: translateX(45px) translateY(95px) scale(1.4) rotate(0deg);
+}
+
+.drop {
+  background-color: #ffffff00;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  -webkit-transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+}
+
+.cats__icon {
+  display: block;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  position: absolute;
+  -webkit-transition: -webkit-transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*# sourceMappingURL=main.css.map */

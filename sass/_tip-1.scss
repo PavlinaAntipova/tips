@@ -1,7 +1,5 @@
-.box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.Illuminated {
+  @extend %box;
 }
 
 .Illuminated-button {
