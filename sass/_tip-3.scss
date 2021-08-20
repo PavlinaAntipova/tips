@@ -1,0 +1,127 @@
+.social-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  width: 80px;
+  height: 80px;
+
+  background-color: rgb(247, 211, 230);
+  border-radius: 50%;
+
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  transition: all 350ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  &:not(:last-of-type) {
+    margin-right: 20px;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 18px;
+  background-color: #ffffff;
+  color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  opacity: 0;
+
+  transition: all 350ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    height: 8px;
+    width: 8px;
+    background-color: #ffffff;
+
+    transform: translate(-50%) rotate(45deg);
+    transition: all 350ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .social-icon:hover & {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .social-icon:hover &__text {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.social-icon:nth-of-type(1):hover .tooltip,
+.social-icon:nth-of-type(1):hover .tooltip::before {
+  background-color: #3b5999;
+}
+
+.social-icon:nth-of-type(2):hover .tooltip,
+.social-icon:nth-of-type(2):hover .tooltip::before {
+  background-color: #46c1f6;
+}
+
+.social-icon:nth-of-type(3):hover .tooltip,
+.social-icon:nth-of-type(3):hover .tooltip::before {
+  background-color: #f03372;
+}
+
+.social-icon:nth-of-type(4):hover .tooltip,
+.social-icon:nth-of-type(4):hover .tooltip::before {
+  background-color: #333333;
+}
+
+.social-icon:nth-of-type(5):hover .tooltip,
+.social-icon:nth-of-type(5):hover .tooltip::before {
+  background-color: #de463b;
+}
+
+.svg-icon {
+  fill: rgb(49, 49, 49);
+}
+
+.social-icon:hover .svg-icon {
+  fill: #ffffff;
+}
+
+.social-icon:hover:nth-of-type(1) {
+  background-color: #3b5999;
+}
+
+.social-icon:hover:nth-of-type(2) {
+  background-color: #46c1f6;
+}
+
+.social-icon:hover:nth-of-type(3) {
+  background-color: #f03372;
+}
+
+.social-icon:hover:nth-of-type(4) {
+  background-color: #333333;
+}
+
+.social-icon:hover:nth-of-type(5) {
+  background-color: #de463b;
+}

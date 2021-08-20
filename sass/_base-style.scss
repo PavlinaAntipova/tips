@@ -13,7 +13,6 @@ body {
 }
 
 .tip-section {
-  height: 100vh;
   padding-top: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
@@ -35,7 +34,7 @@ body {
 .tip-section__icon {
   position: absolute;
   top: 0;
-  left: 25%;
+  left: -7%;
   width: 60px;
   height: 60px;
 }
